@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Web Page Template</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2e3b4e;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin: 0 15px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-list a:hover {
+            color: #00bcd4;
+        }
+
+        .rightnav input {
+            padding: 5px;
+            border: 2px solid #00bcd4;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #007a8e;
+        }
+
+        section {
+            padding: 40px 20px;
+            background: #fff;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        .text-big {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .text-small {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #2e3b4e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #00bcd4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        hr.rounded {
+            border: 2px solid #00bcd4;
+            border-radius: 5px;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            .nav-list li {
+                margin: 5px 0;
+            }
+
+            .rightnav {
+                margin-top: 10px;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="asssets/java_logo.png" alt="Logo">
+        </div>
+        <ul class="nav-list">
+            <li><a href="#web">Java обзор</a></li>
+            <li><a href="#program">Программирование на Java</a></li>
+            <li><a href="#course">Java</a></li>
+        </ul>
+        <div class="rightnav">
+            <input type="text" name="search" id="search" placeholder="Search...">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+
+    <section id="web">
+        <h1 class="text-big">Java обзор</h1>
+        <p class="text-small">
+            Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный
+            компанией Sun Microsystems (в последующем приобретённой компанией Oracle). Приложения Java транслируются в
+            байт-код, поэтому они могут работать на любой архитектуре с виртуальной Java-машиной. Дата официального
+            выпуска — 23 мая 1995 года.
+        </p>
+    </section>
+
+    <section id="program">
+        <h1 class="text-big">Java программирование</h1>
+        <p class="text-small">
+            Java является объектно-ориентированным языком. Однако он поддерживает примитивные типы данных (int, char и т. д.).
+            Коды Java компилируются в байт-код, который запускается на виртуальной машине Java (JVM), независимо от
+            базовой архитектуры.
+        </p>
+    </section>
+
+    <section>
+        <h1 class="text-big">Полезные ссылки</h1>
+        <p class="text-small">
+            <ul>
+                <li><a href="https://www.geeksforgeeks.org/java-basic-syntax/">Базовый синтаксис</a></li>
+                <li><a href="https://runestone.academy/ns/books/published/csjava/index.html">Introduction to Programming with Java</a></li>
+                <li><a href="https://www.codewars.com/collections/java-basics">Тренажер и задачки на CodeWars</a></li>
+                <li><a href="https://stepik.org/course/187/promo">Курс на степике</a></li>
+                <li><a href="https://www.coursera.org/learn/algorithms-part1">Изучение алгоритмов с Java (Coursera)</a></li>
+            </ul>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <hr class="rounded">
+        <p>Интересные гит-репозитории:</p>
+        <p>
+            <a href="https://github.com/Milo4uk/JavaFrequencyDict">Частотный словарь на Java</a> | 
+            <a href="https://github.com/TheAlgorithms/Java/tree/master/src/main/java/com/thealgorithms">Все алгоритмы на Java</a>
+        </p>
+    </footer>
+</body>
+
+</html>
